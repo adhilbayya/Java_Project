@@ -1,12 +1,12 @@
 package com.example.Project.Journal;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping(path = "api/journal")
 public class JournalController {
     private final JournalService journalService;
 
@@ -15,8 +15,13 @@ public class JournalController {
         this.journalService = journalService;
     }
 
-    @GetMapping(path = "journal/data")
+    @GetMapping
     public List<Journal> getJournals() {
         return journalService.getJournal();
+    }
+
+    @PostMapping
+    public void addJournal(@RequestBody Journal journal) {
+        journalService.addNewJournal(journal);
     }
 }

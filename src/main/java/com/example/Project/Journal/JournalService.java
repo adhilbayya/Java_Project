@@ -17,4 +17,8 @@ public class JournalService {
     public List<Journal> getJournal() {
         return journalRepository.findAll();
     }
+
+    public void addNewJournal(Journal journal) {
+        System.out.println(journal);
+    }
 }
