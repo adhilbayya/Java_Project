@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -30,12 +31,12 @@ public class JournalService {
         return newJournal;
     }
 
-    public Journal getJournal(@PathVariable("id") long id) {
+    public Journal getJournal(long id) {
         return journalRepository.findById(id).get();
     }
 
-    public boolean deleteJournal(@PathVariable("journalID") long id){
-        if(!journalRepository.findById(id).equals(Optional.empty())){
+    public boolean deleteJournal(long id) {
+        if (!journalRepository.findById(id).equals(Optional.empty())) {
             journalRepository.deleteById(id);
             return true;
         }
@@ -48,5 +49,9 @@ public class JournalService {
         jo.setJournalDescription(journal.get("journalDescription"));
         journalRepository.save(jo);
         return jo;
+    }
+
+    public List<Journal> getUserJournal(String userId) {
+        return journalRepository.findByUserID(userId);
     }
 }

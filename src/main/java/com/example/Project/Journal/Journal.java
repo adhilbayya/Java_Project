@@ -16,14 +16,23 @@ public class Journal {
             generator = "journal_generator"
     )
     private long journalID;
+
+    private long userID;
     private String journalTitle;
     private String journalDescription;
 
     public Journal() {
     }
 
-    public Journal(long journalID, String journalTitle, String journalDescription) {
+    public Journal(long journalID, long userID, String journalTitle, String journalDescription) {
         this.journalID = journalID;
+        this.userID = userID;
+        this.journalTitle = journalTitle;
+        this.journalDescription = journalDescription;
+    }
+
+    public Journal(long userID, String journalTitle, String journalDescription) {
+        this.userID = userID;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
     }
@@ -39,6 +48,14 @@ public class Journal {
 
     public void setJournalID(long journalID) {
         this.journalID = journalID;
+    }
+
+    public long getUserID() {
+        return userID;
+    }
+
+    public void setUserID(long userID) {
+        this.userID = userID;
     }
 
     public String getJournalTitle() {

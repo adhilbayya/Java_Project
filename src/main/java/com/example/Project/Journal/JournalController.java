@@ -20,6 +20,11 @@ public class JournalController {
         return journalService.getJournal();
     }
 
+    @GetMapping("/get-user-journal/{userId}")
+    public List<Journal> getUserJournal(@PathVariable("userId") String userId) {
+        return journalService.getUserJournal(userId);
+    }
+
     @GetMapping("/get-journal/{id}")
     public Journal getJournal(@PathVariable("id") long id) {
         return journalService.getJournal(id);
