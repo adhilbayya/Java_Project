@@ -17,21 +17,21 @@ public class Journal {
     )
     private long journalID;
 
-    private long userID;
+    private String userID;
     private String journalTitle;
     private String journalDescription;
 
     public Journal() {
     }
 
-    public Journal(long journalID, long userID, String journalTitle, String journalDescription) {
+    public Journal(long journalID, String userID, String journalTitle, String journalDescription) {
         this.journalID = journalID;
         this.userID = userID;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
     }
 
-    public Journal(long userID, String journalTitle, String journalDescription) {
+    public Journal(String userID, String journalTitle, String journalDescription) {
         this.userID = userID;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
@@ -50,11 +50,11 @@ public class Journal {
         this.journalID = journalID;
     }
 
-    public long getUserID() {
+    public String getUserID() {
         return userID;
     }
 
-    public void setUserID(long userID) {
+    public void setUserID(String userID) {
         this.userID = userID;
     }
 

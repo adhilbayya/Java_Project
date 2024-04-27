@@ -24,9 +24,10 @@ public class JournalService {
     }
 
     public Journal addNewJournal(Map<String, String> journal) {
+        String userID = journal.get("userID");
         String title = journal.get("title");
         String description = journal.get("description");
-        Journal newJournal = new Journal(title, description);
+        Journal newJournal = new Journal(userID, title, description);
         journalRepository.save(newJournal);
         return newJournal;
     }
