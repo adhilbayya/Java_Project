@@ -39,7 +39,7 @@ public class Journal {
         this.journalDescription = journalDescription;
     }
 
-    public Journal(String imgURl, String userID, String date, String journalTitle, String journalDescription) {
+    public Journal(String userID, String imgURl,  String date, String journalTitle, String journalDescription) {
         this.imgURl = imgURl;
         this.userID = userID;
         this.date = date;
