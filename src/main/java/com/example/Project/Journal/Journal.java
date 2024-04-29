@@ -98,4 +98,12 @@ public class Journal {
     public void setImgURl(String imgURl) {
         this.imgURl = imgURl;
     }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
