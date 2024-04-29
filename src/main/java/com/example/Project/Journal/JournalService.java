@@ -30,10 +30,6 @@ public class JournalService {
         return newJournal;
     }
 
-    public Journal getJournal(long id) {
-        return journalRepository.findById(id).get();
-    }
-
     public boolean deleteJournal(long id) {
         if (!journalRepository.findById(id).equals(Optional.empty())) {
             journalRepository.deleteById(id);

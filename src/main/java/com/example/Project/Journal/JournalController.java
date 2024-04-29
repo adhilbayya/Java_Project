@@ -25,11 +25,6 @@ public class JournalController {
         return journalService.getUserJournal(userId);
     }
 
-    @GetMapping("/get-journal/{id}")
-    public Journal getJournal(@PathVariable("id") long id) {
-        return journalService.getJournal(id);
-    }
-
     @DeleteMapping("/remove-journal/{journalID}")
     public boolean deleteJournal(@PathVariable("journalID") long id){
         return journalService.deleteJournal(id);

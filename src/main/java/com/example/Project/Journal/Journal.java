@@ -18,6 +18,7 @@ public class Journal {
     private long journalID;
 
     private String userID;
+    private String imgURl;
     private String journalTitle;
     private String journalDescription;
 
@@ -35,6 +36,13 @@ public class Journal {
         this.userID = userID;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
+    }
+
+    public Journal(String userID, String imgURl, String journalTitle, String journalDescription) {
+        this.imgURl = imgURl;
+        this.journalTitle = journalTitle;
+        this.journalDescription = journalDescription;
+        this.userID = userID;
     }
 
     public Journal(String journalTitle, String journalDescription) {
@@ -72,5 +80,13 @@ public class Journal {
 
     public void setJournalDescription(String journalDescription) {
         this.journalDescription = journalDescription;
+    }
+
+    public String getImgURl() {
+        return imgURl;
+    }
+
+    public void setImgURl(String imgURl) {
+        this.imgURl = imgURl;
     }
 }
