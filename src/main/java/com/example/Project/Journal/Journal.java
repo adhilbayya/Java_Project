@@ -19,6 +19,7 @@ public class Journal {
 
     private String userID;
     private String imgURl;
+    private String date;
     private String journalTitle;
     private String journalDescription;
 
@@ -34,6 +35,14 @@ public class Journal {
 
     public Journal(String userID, String journalTitle, String journalDescription) {
         this.userID = userID;
+        this.journalTitle = journalTitle;
+        this.journalDescription = journalDescription;
+    }
+
+    public Journal(String imgURl, String userID, String date, String journalTitle, String journalDescription) {
+        this.imgURl = imgURl;
+        this.userID = userID;
+        this.date = date;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
     }

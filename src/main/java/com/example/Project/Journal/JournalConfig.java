@@ -14,6 +14,7 @@ public class JournalConfig {
             Journal j1 = new Journal(
                     "12",
                     "url",
+                    "Jan-23",
                     "Journal 1",
                     "This is journal one"
             );
