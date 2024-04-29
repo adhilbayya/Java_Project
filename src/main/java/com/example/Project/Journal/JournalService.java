@@ -27,7 +27,7 @@ public class JournalService {
         String url = journal.get("imgURL");
         String date = journal.get("date");
         String description = journal.get("description");
-        Journal newJournal = new Journal(userID, url, title, description);
+        Journal newJournal = new Journal(userID, url, date, title, description);
         journalRepository.save(newJournal);
         return newJournal;
     }
