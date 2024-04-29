@@ -18,7 +18,7 @@ public class Journal {
     private long journalID;
 
     private String userID;
-    private String imgURl;
+    private String journalImage;
     private String date;
     private String journalTitle;
     private String journalDescription;
@@ -39,16 +39,16 @@ public class Journal {
         this.journalDescription = journalDescription;
     }
 
-    public Journal(String userID, String imgURl,  String date, String journalTitle, String journalDescription) {
-        this.imgURl = imgURl;
+    public Journal(String userID, String journalImage,  String date, String journalTitle, String journalDescription) {
+        this.journalImage = journalImage;
         this.userID = userID;
         this.date = date;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
     }
 
-    public Journal(String userID, String imgURl, String journalTitle, String journalDescription) {
-        this.imgURl = imgURl;
+    public Journal(String userID, String journalImage, String journalTitle, String journalDescription) {
+        this.journalImage = journalImage;
         this.journalTitle = journalTitle;
         this.journalDescription = journalDescription;
         this.userID = userID;
@@ -92,11 +92,11 @@ public class Journal {
     }
 
     public String getImgURl() {
-        return imgURl;
+        return journalImage;
     }
 
-    public void setImgURl(String imgURl) {
-        this.imgURl = imgURl;
+    public void setImgURl(String journalImage) {
+        this.journalImage = journalImage;
     }
 
     public String getDate() {
